@@ -1,0 +1,256 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>싸니까! 믿으니까! 인터파크니까!</title>
+
+</head>
+
+<body marginheight="0" marginwidth="0" leftmargin="0" topmargin="0" onload="winResize()">
+    <style>
+
+        td	 {font-size:12px;font-family:돋움}
+        .border_style_left	{border:solid 1px #949494}
+        .border_style_right{border:solid 1px #949494;border-left:none}
+    </style>
+
+<table cellspacing="0" cellpadding="0" border="0" width="398">
+    <tr>
+        <td><img src="http://mall-etax.interpark.com/interpark/bill/images/card/bit_box01_01.gif" width="398" height="73" border="0" alt=""/></td>
+    </tr>
+
+</table>
+<table cellspacing="0" cellpadding="0" border="0" width="398">
+    <col width="28"/>
+    <col/>
+    <col width="28"/>
+    <tr valign="top">
+        <td bgcolor="#29acbe"><img src="http://mall-etax.interpark.com/interpark/bill/images/card/bit_box01_02.gif" width="28" height="626" border="0" alt=""/></td>
+        <!-- ######### 카드 전표 내용 영역 시작 ######### -->
+        <td style="padding:2px">
+
+            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                <col width="168"/>
+                <tr valign="top">
+                    <td title="카드종류" class="border_style_left">
+                        <div><img src="http://mall-etax.interpark.com/interpark/bill/images/card/item_01.gif" height="17" border="0" alt=""/></div>
+                        <div style="padding:3px 0 0 5px;height:19px"><span id="cardType"></span></div>
+                    </td>
+                    <td title="카드번호" class="border_style_right">
+                        <div><img src="http://mall-etax.interpark.com/interpark/bill/images/card/item_02.gif" height="17" border="0" alt=""/></div>
+
+                        <div style="padding:3px 0 0 5px;height:19px"><span id="cardNo"></span></div>
+                    </td>
+                </tr>
+            </table>
+            <br style="line-height:1px"/>
+            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                <col width="168"/>
+                <tr valign="top">
+                    <td title="유효기간" class="border_style_left">
+
+                        <div><img src="http://mall-etax.interpark.com/interpark/bill/images/card/item_03.gif" width="168" height="17" border="0" alt=""/></div>
+                        <div style="padding:3px 0 0 5px;height:19px">****</div>
+                    </td>
+                    <td title="구매자명" class="border_style_right">
+                        <div><img src="http://mall-etax.interpark.com/interpark/bill/images/card/item_04.gif" height="17" border="0" alt=""/></div>
+                        <div style="padding:3px 0 0 5px;height:19px"><span id="purchaserName"></span></div>
+                    </td>
+                </tr>
+            </table>
+
+            <br style="line-height:1px"/>
+            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                <col width="168"/>
+                <tr valign="top">
+                    <td title="거래일시" class="border_style_left">
+                        <div><img src="http://mall-etax.interpark.com/interpark/bill/images/card/item_05.gif" width="168" height="17" border="0" alt=""/></div>
+                        <div style="padding:3px 0 0 5px;height:19px"><span id="transDate"></span> <span id="transTime"></span></div>
+                    </td>
+                    <td title="상품명" class="border_style_right">
+
+                        <div><img src="http://mall-etax.interpark.com/interpark/bill/images/card/item_06.gif" height="17" border="0" alt=""/></div>
+                        <div style="padding:3px 0 0 5px;height:19px"><span id="description"></span></div>
+                    </td>
+                </tr>
+            </table>
+            <br style="line-height:1px"/>
+            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                <col/>
+                <col/>
+
+                <col width="167"/>
+                <tr valign="top">
+                    <td title="카드" class="border_style_left">
+                        <div><img src="http://mall-etax.interpark.com/interpark/bill/images/card/item_07.gif" height="17" border="0" alt=""/></div>
+                        <div style="padding:3px 0 0 5px;height:19px">카드 </div>
+                    </td>
+                    <td title="할부" class="border_style_right">
+                        <div><img src="http://mall-etax.interpark.com/interpark/bill/images/card/item_08.gif" height="17" border="0" alt=""/></div>
+
+                        <div style="padding:3px 0 0 5px;height:19px" id="halbu1" name="halbu1">일시불</div>
+                    </td>
+                    <td title="승인번호" class="border_style_right">
+                        <div><img src="http://mall-etax.interpark.com/interpark/bill/images/card/item_09.gif" height="17" border="0" alt=""/></div>
+                        <div style="padding:3px 0 0 5px;height:19px"><span id="approvalNo"></span> </div>
+                    </td>
+                </tr>
+            </table>
+
+            <br style="line-height:1px"/>
+            <table cellspacing="0" cellpadding="0" border="0" width="100%" height="256">
+                <tr valign="top">
+                    <td>
+                        <div style="position:relative">
+                            <div style="position:absolute;left:0;top:0">
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                    <tr valign="top">
+                                        <td width="154">
+
+                                            <!--카드사 가맹점 정보 영역 시작-->
+                                            <table cellspacing="0" cellpadding="0" border="0" width="154">
+                                                <tr>
+                                                    <td height="28"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td title="가맹점 명" height="37" style="padding:3px 0 0 5px">(주)인터파크INT</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td height="37"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td title="가맹점 번호" height="37" style="padding:3px 0 0 5px">(주)인터파크INT</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <!--카드사 가맹점 정보 영역 끝-->
+                                        <!--금액 영역 시작-->
+                                        <td style="padding:28px 0 0 40px" align="right">
+                                            <table cellspacing="1" cellpadding="0" border="0" width="145">
+                                                <col width="15" span="9"/>
+                                                <tr align="center" title="금액">
+                                                    <td height="36"><div name="amount1" id="amount1"></div></td>
+                                                    <td height="36"><div name="amount1" id="amount1"><span id="amount_8"></span></div></td>
+                                                    <td height="36"><div name="amount1" id="amount1"><span id="amount_7"></span></div></td>
+                                                    <td height="36"><div name="amount1" id="amount1"><span id="amount_6"></span></div></td>
+                                                    <td height="36"><div name="amount1" id="amount1"><span id="amount_5"></span></div></td>
+                                                    <td height="36"><div name="amount1" id="amount1"><span id="amount_4"></span></div></td>
+                                                    <td height="36"><div name="amount1" id="amount1"><span id="amount_3"></span></div></td>
+                                                    <td height="36"><div name="amount1" id="amount1"><span id="amount_2"></span></div></td>
+                                                    <td height="36"><div name="amount1" id="amount1"><span id="amount_1"></span></div></td>
+                                                </tr>
+                                                <tr align="center" title="부가세">
+                                                    <td height="36"><div name="vat1" id="vat1"></div></td>
+                                                    <td height="36"><div name="vat1" id="vat1"><span id="taxes_8"></span></div></td>
+                                                    <td height="36"><div name="vat1" id="vat1"><span id="taxes_7"></span></div></td>
+                                                    <td height="36"><div name="vat1" id="vat1"><span id="taxes_6"></span></div></td>
+                                                    <td height="36"><div name="vat1" id="vat1"><span id="taxes_5"></span></div></td>
+                                                    <td height="36"><div name="vat1" id="vat1"><span id="taxes_4"></span></div></td>
+                                                    <td height="36"><div name="vat1" id="vat1"><span id="taxes_3"></span></div></td>
+                                                    <td height="36"><div name="vat1" id="vat1"><span id="taxes_2"></span></div></td>
+                                                    <td height="36"><div name="vat1" id="vat1"><span id="taxes_1"></span></div></td>
+                                                </tr>
+
+                                                <tr align="center" title="합계">
+                                                    <td height="36"><div name="total1" id="total1"></div></td>
+                                                    <td height="36"><div name="total1" id="total1"><span id="total_8"></span></div></td>
+                                                    <td height="36"><div name="total1" id="total1"><span id="total_7"></span></div></td>
+                                                    <td height="36"><div name="total1" id="total1"><span id="total_6"></span></div></td>
+                                                    <td height="36"><div name="total1" id="total1"><span id="total_5"></span></div></td>
+                                                    <td height="36"><div name="total1" id="total1"><span id="total_4"></span></div></td>
+                                                    <td height="36"><div name="total1" id="total1"><span id="total_3"></span></div></td>
+                                                    <td height="36"><div name="total1" id="total1"><span id="total_2"></span></div></td>
+                                                    <td height="36"><div name="total1" id="total1"><span id="total_1"></span></div></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <!--금액 영역 끝-->
+                                    </tr>
+                                </table>
+                                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                    <col width="148"/>
+
+                                    <col/>
+                                    <tr>
+                                        <td height="33"></td>
+                                    </tr>
+                                    <tr>
+                                        <td title="업체명" height="30" style="padding:3px 0 0 5px"><span id="shopName"></span></td>
+                                        <td title="대표자명" height="30" style="padding:3px 0 0 10px"><span id="master"></span></td>
+                                    </tr>
+                                    <tr>
+
+                                        <td height="17"></td>
+                                    </tr>
+                                    <tr>
+                                        <td title="사업자등록번호" height="20" style="padding:3px 0 0 5px"><span id="shopNo"></span></td>
+                                        <td title="연락처" height="20" style="padding:3px 0 0 10px"><span id="sellerPhoneNo"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="17"></td>
+                                    </tr>
+
+                                    <tr valign="top">
+                                        <td colspan="2" title="가맹점 주소" height="35" style="padding:3px 0 0 5px"><span id="sellerAddress"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="17"></td>
+                                    </tr>
+                                    <tr valign="top">
+                                        <td title="사업장 주소" height="38" style="padding:5px 0 0 5px">1588-1555</td>
+
+                                        <td title="사업장 주소" height="38" style="padding:5px 0 0 10px">1588-1555</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div><img src="http://mall-etax.interpark.com/interpark/bill/images/card/item_12.gif" width="338" height="330" border="0" alt=""/></div>
+                    </td>
+                </tr>
+
+            </table>
+            <!--설명 문구 영역 시작-->
+            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                <tr>
+                    <td style="padding:10px 0 4px 5px">
+                        <font style="font-size:11px;letter-spacing:-1px;">신용카드 청구서에는 인터파크INT(www.interpark.com)으로 표기 됩니다.<br/>
+                        this transaction will be billed by interpark. co. ltd.</font>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td align="center"><img src="http://mall-etax.interpark.com/interpark/bill/images/card/dot.gif" width="332" height="2" border="0" alt=""/></td>
+                </tr>
+                <tr>
+                    <td style="padding:7px 0 0 5px">
+                        <font style="font-size:11px;letter-spacing:-1px;">부가세법 시행령 제 57조 2항에 따라 신용카드매출전표(영수증)도<br/>
+                        매입세금계산서로 사용할 수 있으며 별도의 세금계산서를 교부하지 않습니다.</font>
+
+                    </td>
+                </tr>
+            </table>
+            <!--설명 문구 영역 끝-->
+        </td>
+        <!-- ######### 카드 전표 내용 영역 시작 ######### -->
+        <td bgcolor="#29acbe"><img src="http://mall-etax.interpark.com/interpark/bill/images/card/bit_box01_03.gif" width="28" height="626" border="0" alt=""/></td>
+    </tr>
+</table>
+
+<table cellspacing="0" cellpadding="0" border="0" width="398">
+    <tr>
+        <td><img src="http://mall-etax.interpark.com/interpark/bill/images/card/bit_box01_04.gif" width="398" height="40" border="0" alt=""/></td>
+    </tr>
+</table>
+
+<div class="btnPrint">
+  <a href="#" class="btn em4" onclick="popPrint();"><span class="normal">인쇄하기</span></a>
+  <a href="#" class="btn" onclick="self.close();"><span class="normal">닫기</span></a>
+</div>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="../assets/receipt.js"></script>
+<script src="../assets/receipt_form.js"></script>
+<link href="../assets/print.css" rel="stylesheet" media="print">
+</body>
+</html>

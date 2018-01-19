@@ -1,0 +1,51 @@
+.btnPrint {
+  margin: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1px;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  background: #a6a6a6;
+  color: #656565;
+  font-family: '돋움',dotum,sans-serif;
+  font-size: 11px;
+  line-height: 13px;
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.btn.em4 {
+  background: #f6390f;
+  color: #e71616;
+}
+
+.btn.em4 span {
+  color: #e71616;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#fff1ec));
+  background: -moz-linear-gradient(top, #fff, #fff1ec);
+  background: -o-linear-gradient(top, #fff, #fff1ec);
+  background: -ms-linear-gradient(top, #fff, #fff1ec);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#ffffff, endColorStr=#fff1ec);
+}
+
+.btn span.normal {
+  min-width: 50px;
+  text-align: center;
+}
+
+.btn span {
+  display: inline-block;
+  height: 13px;
+  padding: 3px 5px 0px 5px;
+  border: 1px solid #fff;
+  letter-spacing: -1px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f6f6f6));
+  background: -moz-linear-gradient(top, #fff, #f6f6f6);
+  background: -o-linear-gradient(top, #fff, #f6f6f6);
+  background: -ms-linear-gradient(top, #fff, #f6f6f6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#ffffff, endColorStr=#f6f6f6);
+  color: #666;
+}

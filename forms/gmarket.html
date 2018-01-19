@@ -1,0 +1,264 @@
+<!--
+@Tip!
+1. 주문번호 형식 : 장바구니번호/체결번호
+2. 문자 길이 제한 : 상품명 혹은 사업장 주소가 길더라도 전표에는 한줄이상 출력되지 않음.
+-->
+
+<html>
+<head>
+<title>카드 매출전표</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href='http://www.gmarket.co.kr/challenge/neo_my_gd/good2.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body topmargin="0" leftmargin="0" marginheight="0" marginwidth="0" onload="winResize()">
+<table width="400" border="0" cellspacing="0" cellpadding="6" bgcolor="407DBC" style="margin-top:5px">
+    <tr>
+        <td align="center" style="padding-top:15px"><span style="color:ffffff;font-size:14px;font-weight:bold">신용카드 매출전표</span> <span style="color:ffffff">Sales Slip (Credit Card)</span> </td>
+    </tr>
+    <tr>
+        <td bgcolor="407DBC">
+            <table width="388" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="A4C1DF">
+                <tr bgcolor="#FFFFFF">
+                    <td width="194" align="right">
+                        <table width="184" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td height="24"><font color="6C98C7">주문번호</font></td>
+                            </tr>
+                            <tr>
+                                <td height="16"><span id="orderNo"></span></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="194" align="right">
+                        <table width="184" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td height="24"><font color="6C98C7">카드종류</font></td>
+                            </tr>
+                            <tr>
+                                <td height="16"><span id="cardType"></span></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="194" align="right">
+                        <table width="184" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td height="24"><font color="6C98C7">카드번호</font></td>
+                            </tr>
+                            <tr>
+                                <td height="16"><span id="cardNo"></span></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="194" align="right">
+                        <table width="184" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td height="24"><font color="6C98C7">유효기간</font></td>
+                            </tr>
+                            <tr>
+                                <td height="16">**/**</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="194" align="right">
+                        <table width="184" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td height="24"><font color="6C98C7">승인번호</font></td>
+                            </tr>
+                            <tr>
+                                <td height="16"><span id="approvalNo"></span></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="194" align="right">
+                        <table width="184" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td height="24"><font color="6C98C7">거래일자</font></td>
+                            </tr>
+                            <tr>
+                                <td height="16"><span id="transDate"></span> <span id="transTime"></span></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="194" align="right">
+                        <table width="184" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td height="24"><font color="6C98C7">거래유형</font></td>
+                            </tr>
+                            <tr>
+                                <td height="16">일시불</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="194" align="right">
+                        <table width="184" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td height="24"><font color="6C98C7">거래종류</font></td>
+                            </tr>
+                            <tr>
+                                <td height="16">신용거래</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td colspan="2" align="right">
+                        <table width="378" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td height="24"><font color="6C98C7">상품명</font></td>
+                            </tr>
+                            <tr>
+                                <td height="16"><span id="description"></span></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+
+
+                <tr bgcolor="#FFFFFF">
+                    <td width="194" height="24" align="center"><font color="6C98C7">금액</font></td>
+                    <td width="180" height="24" align="right"><span id="amount"></span></td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="194" height="24"  align="center"><font color="6C98C7">부가세</font></td>
+                    <td width="180" height="24" align="right"><span id="taxes"></span></td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="194" height="24"  align="center"><font color="6C98C7">봉사료</font></td>
+                    <td width="180" height="24" align="right"> </td>
+                </tr>
+                <tr bgcolor="#FFFFFF">
+                    <td width="194" height="24" align="center" ><font color="6C98C7">합계</font></td>
+                    <td width="180" height="24" align="right"><span id="total"></span></td>
+                </tr>
+
+            </td>
+        </table>
+        <table width="388" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="A4C1DF" style="margin-top:3px">
+            <tr bgcolor="#FFFFFF">
+                <td colspan="2" height="28" style="color:2A6BAE; font-weight:bold; padding-left:10px">가맹점 정보</td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td align="right" bgcolor="#FFFFFF">
+                    <table width="184" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td height="24"><font color="6C98C7">상호</font></td>
+                        </tr>
+                        <tr>
+                            <td height="16">(주)이베이코리아</td>
+                        </tr>
+                    </table>
+                </td>
+                <td align="right" bgcolor="#FFFFFF">
+                    <table width="184" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td height="24"><font color="6C98C7">사업자등록번호</font></td>
+                        </tr>
+                        <tr>
+                            <td height="16">220-81-83676</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <table width="388" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="A4C1DF" style="margin-top:3px">
+            <tr bgcolor="#FFFFFF">
+                <td colspan="2" height="28" style="color:2A6BAE; font-weight:bold; padding-left:10px">판매자 정보</td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td align="right" bgcolor="#FFFFFF">
+                    <table width="184" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td height="24"><font color="6C98C7">상호</font></td>
+                        </tr>
+                        <tr>
+                            <td height="16"><span id="shopName"></span></td>
+                        </tr>
+                    </table>
+                </td>
+                <td align="right" bgcolor="#FFFFFF">
+                    <table width="184" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td height="24"><font color="6C98C7">사업자등록번호</font></td>
+                        </tr>
+                        <tr>
+                            <td height="16"><span id="shopNo"></span></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td align="right" bgcolor="#FFFFFF">
+                    <table width="184" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td height="24"><font color="6C98C7">대표자명</font></td>
+                        </tr>
+                        <tr>
+                            <td height="16"><span id="master"></span></td>
+                        </tr>
+                    </table>
+                </td>
+                <td align="right" bgcolor="#FFFFFF">
+                    <table width="184" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td height="24"><font color="6C98C7">전화번호</font></td>
+                        </tr>
+                        <tr>
+                            <td height="16"><span id="sellerPhoneNo"></span></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td align="right" bgcolor="#FFFFFF">
+                    <table width="184" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td height="24"><font color="6C98C7">과세유형</font></td>
+                        </tr>
+                        <tr>
+                            <td height="16">일반 과세자</td>
+                        </tr>
+                    </table>
+                </td>
+                <td align="right" bgcolor="#FFFFFF">
+                    <table width="184" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td height="24"><font color="6C98C7">사업장 주소</font></td>
+                        </tr>
+                        <tr>
+                            <td height="16"><span id="sellerAddress"></span></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+                <td colspan="2" style="font-size:11px;padding:8 5 6 5">
+                    본 영수증은 ㈜이베이코리아에서 발행하는 신용카드매출전표입니다. <br>
+                    위 신용카드매출전표는 부가가치세법 제32조의 2 제3항에 의하여 발행되었으며, 동법 시행령 제57조 제2항에 의하여 세금계산서를 교부하지 않습니다.
+                </td>
+            </tr>
+        </table>
+    </td>
+</tr>
+</table>
+
+<div align="center" class="btnPrint" style="margin-top:10px;">
+  <a href="#" class="btn em4" onclick="popPrint();"><span class="normal">인쇄하기</span></a>
+  <a href="#" class="btn" onclick="self.close();"><span class="normal">닫기</span></a>
+</div>
+
+
+</body>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="../assets/receipt.js"></script>
+<script src="../assets/receipt_form.js"></script>
+<link href="../assets/print.css" rel="stylesheet" media="print">
+</html>

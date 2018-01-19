@@ -1,0 +1,5 @@
+@charset "UTF-8";
+/*프린트 시 배경 이미지 출력*/
+h1, h2, h3, h4, h5, dl, dt, dd, ul, li, ol, th, td, p, blockquote, form, fieldset, legend, div,body { -webkit-print-color-adjust:exact; }
+/*.pop_Print  {overflow:yes;  height:auto}*/
+.btnPrint  {display:none}
