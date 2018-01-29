@@ -99,7 +99,7 @@ function setSalePrice (taxType) {
   var taxPercent = 10;
   var taxType = (taxType) ? taxType : 1;
 
-  if (taxType === '1') {
+  if (taxType === 1) {
     // taxation
     if (taxPercent > 99.9) {
       alert('The maximum tax rate is less than 100%.');
