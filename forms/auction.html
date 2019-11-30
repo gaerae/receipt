@@ -1,151 +1,127 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
 <html>
-<head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43146612-2"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-43146612-2');
-</script>
-<title> 당신이 찾는 모든 스타일, 옥션 </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="Cache-control" content="No-cache" />
-<meta http-equiv="Pragma" content="No-cache" />
-<meta name="Vs_targetschema" content="Http://Schemas.Microsoft.Com/Intellisense/Ie5" />
-<meta name="Description" content="" />
-<meta name="Keywords" content="" />
-<link rel="stylesheet" type="text/css" href="https://script.auction.co.kr/style/css_ssl/sell/sell.css" />
-<script type="text/javascript" src="https://script.auction.co.kr/style/js/common.js"></script>
-<script type="text/javascript">
-window.onload = function() {
-    window.focus();
-};
-function js_print() {
-    try {
-        document.getElementById("printBtn").style.display = "none";
-        window.print();
-        document.getElementById("printBtn").style.display = "";
-    }
-    catch (e) {
-    }
-}
-</script>
-</head>
-
-<body onload="winResize()">
-
-<div class="uxb-creditcard">
-    <h1>신용카드 매출전표</h1>
-    <ul>
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43146612-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-43146612-2');
+    </script>
+    <title>매출전표</title>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Cache-control" content="No-cache" />
+    <meta http-equiv="Pragma" content="No-cache" />
+    <meta name="Description" content="" />
+    <meta name="Keywords" content="" />
+    <link rel="stylesheet" type="text/css" href="//script.auction.co.kr/pc/style/css/sell_popup.css" />
+  </head>
+  <body onload="winResize()">
+    <div class="uxb-creditcard">
+      <h1>신용카드 매출전표</h1>
+      <ul>
         <li>
-        <span class="tit">카드종류 :</span>
-        <span class="card"><span id="cardType"></span></span>
+          <span class="tit">카드종류 :</span>
+          <span class="card"><span id="cardType"></span></span>
         </li>
         <li>
-        <span class="tit">카드번호 :</span>
-        <span class="num"><span id="cardNo"></span></span>
+          <span class="tit">카드번호 :</span>
+          <span class="num"><span id="cardNo"></span></span>
         </li>
-    </ul>
-    <div class="uxb-statement">
+      </ul>
+      <div class="uxb-statement">
         <table>
-            <colgroup>
+          <colgroup>
             <col class="colwid">
             <col />
-            </colgroup>
-            <tbody>
+          </colgroup>
+          <tbody>
             <tr>
-                <th scope="col">거래종류</th>
-                <th scope="col">거래금액</th>
+              <th scope="col">거래종류</th>
+              <th scope="col">거래금액</th>
             </tr>
             <tr>
-                <td>신용구매</td>
-                <td><span id="amount"></span>원</td>
+              <td>신용구매</td>
+              <td><span id="amount"></span>원</td>
             </tr>
             <tr>
-                <th scope="col">거래일자</th>
-                <th scope="col">부가세</th>
+              <th scope="col">거래일자</th>
+              <th scope="col">부가세</th>
             </tr>
             <tr>
-                <td><span id="transDate"></span></td>
-                <td><span id="taxes"></span>원</td>
+              <td><span id="transDate"></span></td>
+              <td><span id="taxes"></span>원</td>
             </tr>
             <tr>
-                <th scope="col">승인번호</th>
-                <th scope="col">합계</th>
+              <th scope="col">승인번호</th>
+              <th scope="col">합계</th>
             </tr>
             <tr>
-                <td><span id="approvalNo"></span></td>
-                <td><span id="total"></span>원</td>
+              <td><span id="approvalNo"></span></td>
+              <td><span id="total"></span>원</td>
             </tr>
             <tr>
-                <th scope="col">승인일자</th>
-                <th scope="col">할부구분</th>
+              <th scope="col">
+                주문번호
+              </th>
+              <th scope="col">할부구분</th>
             </tr>
             <tr>
-                <td><span id="approvalDate"></span></td>
-                <td>일시불</td>
+              <td><span id="orderNo"></span></td>
+              <td>일시불</td>
             </tr>
             <tr>
-                <th scope="col" colspan="2">상품명</th>
+              <th scope="col" colspan="2">상품명</th>
             </tr>
             <tr>
-                <td class="name" colspan="2">
-                    <p><span id="description"></span></p>
-                </td>
+              <td class="name" colspan="2">
+                <p><span id="description"></span></p>
+              </td>
             </tr>
             <tr>
-                <th scope="col">옥션회원ID</th>
-                <th scope="col">회원성명</th>
+              <th scope="col">업체명</th>
+              <th scope="col">대표자</th>
             </tr>
             <tr>
-                <td><span id="purchaserId"></span></td>
-                <td><span id="purchaserName"></span></td>
+              <td><span id="shopName"></span></td>
+              <td><span id="master"></span></td>
             </tr>
             <tr>
-                <th scope="col">업체명</th>
-                <th scope="col">대표자</th>
+              <th scope="col">사업자등록번호</th>
+              <th scope="col">가맹점번호</th>
             </tr>
             <tr>
-                <td><span id="shopName"></span></td>
-                <td><span id="master"></span></td>
+              <td><span id="shopNo"></span></td>
+              <td>Auction전자지불</td>
             </tr>
             <tr>
-                <th scope="col">사업자등록번호</th>
-                <th scope="col">가맹점번호</th>
+              <th scope="col" colspan="2">가맹점주소</th>
             </tr>
             <tr>
-                <td><span id="shopNo"></span></td>
-                <td>Auction전자지불</td>
+              <td colspan="2"><span id="sellerAddress"></span></td>
             </tr>
             <tr>
-                <th scope="col" colspan="2">가맹점주소</th>
+              <th scope="col" colspan="2">문의연락처</th>
             </tr>
             <tr>
-                <td colspan="2"><span id="sellerAddress"></span>&nbsp;</td>
+              <td colspan="2"><span id="sellerPhoneNo"></span</td>
             </tr>
-            <tr>
-                <th scope="col" colspan="2">문의연락처</th>
-            </tr>
-            <tr>
-                <td colspan="2"><span id="sellerPhoneNo"></span>&nbsp;</td>
-            </tr>
-            </tbody>
+          </tbody>
         </table>
+      </div>
+      <p class="info">본 확인서는 (주) 이베이코리아에서 발행한 신용카드 매출전표입니다.</p>
     </div>
-    <p class="info">본 확인서는 (주) 이베이코리아에서 발행한 신용카드 매출전표입니다.</p>
-</div>
-<center>
-<div class="btnPrint">
-  <a href="#" class="btn em4" onclick="popPrint();"><span class="normal">인쇄하기</span></a>
-  <a href="#" class="btn" onclick="self.close();"><span class="normal">닫기</span></a>
-</div>
-</center>
-
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="../assets/receipt.js"></script>
-<script src="../assets/receipt_form.js"></script>
-<link href="../assets/base.css" rel="stylesheet">
-<link href="../assets/print.css" rel="stylesheet" media="print">
-</body>
+    <center>
+    <div class="btnPrint">
+        <a href="#" class="btn em4" onclick="popPrint();"><span class="normal">인쇄하기</span></a>
+        <a href="#" class="btn" onclick="self.close();"><span class="normal">닫기</span></a>
+    </div>
+    </center>
+    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="../assets/receipt.js"></script>
+    <script src="../assets/receipt_form.js"></script>
+    <link href="../assets/base.css" rel="stylesheet">
+    <link href="../assets/print.css" rel="stylesheet" media="print">
+  </body>
 </html>
