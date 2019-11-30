@@ -1,170 +1,173 @@
-<html>
+<html xmlns="//www.w3.org/1999/xhtml">
   <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43146612-2"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-43146612-2');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-43146612-2');
     </script>
     <title>신용카드 매출전표</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="http://script.gmarket.co.kr/pc/css/ko/myg.css">
-    <link rel="stylesheet" type="text/css" href="http://script.gmarket.co.kr/pc/css/ko/myg_layer.css">
-    <link rel="stylesheet" type="text/css" href="http://script.gmarket.co.kr/pc/css/ko/myg_net.css">
-    <!--
-    @Tip!
-    1. 주문번호 형식 : 장바구니번호/체결번호
-    2. 문자 길이 제한 : 상품명 혹은 사업장 주소가 길더라도 전표에는 한줄이상 출력되지 않음.
-    -->
+    <link rel="stylesheet" type="text/css" href="//script.gmarket.co.kr/pc/css/ko/myg.css">
+    <link rel="stylesheet" type="text/css" href="//script.gmarket.co.kr/pc/css/ko/myg_layer.css">
+    <link rel="stylesheet" type="text/css" href="//script.gmarket.co.kr/pc/css/ko/myg_net.css">
+    <style type="text/css">
+      P.breakhere {page-break-before : always}
+    </style>
   </head>
-  <body onload="winResize()">
+  <body style="background-color:White;" onload="winResize()">
     <div class="layer_wrap cash_receipts scroll_box">
+      <div class="layer_top">
+        <h1 class="op_hide title_typeB tit_bg_04">신용카드 매출전표</h1>
+      </div>
       <div class="layer_main">
-        <div id="divCardReceiptForm" class="receipt_area">
-          <div id="paperBill" class="paper_type1" style="position:static">
-            <h1>신용카드 매출전표 <span>Sales Slip (Credit Card)</span></h1>
-            <!-- 취소 레이어-->
-            <table class="bill_typ1" summary="신용카드 매출전표 주문번호, 카드종류, 카드번호, 유효기간 승인번호, 거래일자, 거래유형, 거래종류, 상품명">
-              <caption>신용카드 매출전표</caption>
-              <colgroup>
-                <col width="50%">
-                <col width="50%">
-              </colgroup>
-              <tbody>
-                <tr class="scp_col">
-                  <th scope="col">주문번호</th>
-                  <th scope="col">카드종류</th>
-                </tr>
-                <tr class="scp_col">
-                  <td><span id="orderNo"></span></td>
-                  <td><span id="cardType"></span></td>
-                </tr>
-                <tr class="scp_col">
-                  <th scope="col">카드번호</th>
-                  <th scope="col">유효기간</th>
-                </tr>
-                <tr class="scp_col">
-                  <td><span id="cardNo"></span></td>
-                  <td>**/**</td>
-                </tr>
-                <tr class="scp_col">
-                  <th scope="col">승인번호</th>
-                  <th scope="col">거래일자</th>
-                </tr>
-                <tr class="scp_col">
-                  <td><span id="approvalNo"></span></td>
-                  <td><span id="transDate"></span> <span id="transTime"></span></td>
-                </tr>
-                <tr class="scp_col">
-                  <th scope="col">거래유형</th>
-                  <th scope="col">거래종류</th>
-                </tr>
-                <tr class="scp_col">
-                  <td>일시불</td>
-                  <td>신용거래</td>
-                </tr>
-                <tr class="scp_col">
-                  <th scope="col" colspan="2">상품명</th>
-                </tr>
-                <tr class="scp_col">
-                  <td colspan="2"><span id="description"></span></td>
-                </tr>
-                <tr class="scp_row">
-                  <th scope="row">금액</th>
-                  <td id="tdAmount"><span id="amount"></span></td>
-                </tr>
-                <tr class="scp_row">
-                  <th scope="row">부가세</th>
-                  <td id="tdVat"><span id="taxes"></span></td>
-                </tr>
-                <tr class="scp_row">
-                  <th scope="row">봉사료</th>
-                  <td></td>
-                </tr>
-                <tr class="scp_row">
-                  <th scope="row">합계</th>
-                  <td><span id="total"></span></td>
-                </tr>
-              </tbody>
-            </table>
-            <!--// 신용카드 매출전표 -->
-            <table class="bill_typ1" summary="가맹정 정보 상호, 사업자등록번호">
-              <caption>가맹정 정보</caption>
-              <colgroup>
-                <col width="50%">
-                <col width="50%">
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col" colspan="2">가맹점 정보</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="scp_col">
-                  <th scope="col">상호</th>
-                  <th scope="col">사업자등록번호</th>
-                </tr>
-                <tr class="scp_col">
-                  <td>(주)이베이코리아</td>
-                  <td>220-81-83676</td>
-                </tr>
-              </tbody>
-            </table>
-            <!--// 가맹정 정보 -->
-            <table class="bill_typ1" summary="판매자 정보 상호, 사업자등록번호, 대표자명, 전화번호, 과세유형, 사업장주소, 비고">
-              <caption>판매자 정보</caption>
-              <colgroup>
-                <col width="50%">
-                <col width="50%">
-              </colgroup>
-              <thead>
-                <tr>
-                  <th scope="col" colspan="2">판매자 정보</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="scp_col">
-                  <th scope="col">상호</th>
-                  <th scope="col">사업자등록번호</th>
-                </tr>
-                <tr class="scp_col">
-                  <td><span id="shopName"></span></td>
-                  <td><span id="shopNo"></span></td>
-                </tr>
-                <tr class="scp_col">
-                  <th scope="col">대표자명</th>
-                  <th scope="col">전화번호</th>
-                </tr>
-                <tr class="scp_col">
-                  <td><span id="master"></span></td>
-                  <td><span id="sellerPhoneNo"></span></td>
-                </tr>
-                <tr class="scp_col">
-                  <th scope="col">과세유형</th>
-                  <th scope="col">사업장 주소</th>
-                </tr>
-                <tr class="scp_col">
-                  <td>일반 과세자</td>
-                  <td><span id="sellerAddress"></span></td>
-                </tr>
-                <tr class="scp_col">
-                  <td colspan="2" class="desc">
-                    본 영수증은 <span>(주)이베이코리아</span>에서 발행하는 신용카드매출전표입니다. <br>
-                    위 신용카드매출전표는 부가가치세법 제32조의 2 제3항에 의하여 발행되었으며, 동법 시행령 제57조 제2항에 의하여 세금계산서를 교부하지 않습니다.
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <!--// 판매자 정보 -->
+        <div>
+          <div id="divCardReceiptForm" class="receipt_area">
+            <div id="paperBill" class="paper_type1" style="position:static">
+              <h1>신용카드 매출전표 <span>Sales Slip (Credit Card)</span></h1>
+              <!-- 취소 레이어-->
+              <table class="bill_typ1" summary="신용카드 매출전표 주문번호, 카드종류, 카드번호, 유효기간 승인번호, 거래일자, 거래유형, 거래종류, 상품명">
+                <caption>신용카드 매출전표</caption>
+                <colgroup>
+                  <col width="50%">
+                  <col width="50%">
+                </colgroup>
+                <tbody>
+                  <tr class="scp_col">
+                    <th scope="col">주문번호</th>
+                    <th scope="col">카드종류</th>
+                  </tr>
+                  <tr class="scp_col">
+                    <td><span id="orderNo"></span></td>
+                    <td><span id="cardType"></span></td>
+                  </tr>
+                  <tr class="scp_col">
+                    <th scope="col">카드번호</th>
+                    <th scope="col">유효기간</th>
+                  </tr>
+                  <tr class="scp_col">
+                    <td><span id="cardNo"></span</td>
+                    <td>**/**</td>
+                  </tr>
+                  <tr class="scp_col">
+                    <th scope="col">승인번호</th>
+                    <th scope="col">거래일자</th>
+                  </tr>
+                  <tr class="scp_col">
+                    <td><span id="approvalNo"></span></td>
+                    <td><span id="transDate"></span> <span id="transTime"></span></td>
+                  </tr>
+                  <tr class="scp_col">
+                    <th scope="col">거래유형</th>
+                    <th scope="col">거래종류</th>
+                  </tr>
+                  <tr class="scp_col">
+                    <td>일시불</td>
+                    <td>신용거래</td>
+                  </tr>
+                  <tr class="scp_col">
+                    <th scope="col" colspan="2">상품명</th>
+                  </tr>
+                  <tr class="scp_col">
+                    <td colspan="2"><span id="description"></span></td>
+                  </tr>
+                  <tr class="scp_row">
+                    <th scope="row">금액</th>
+                    <td id="tdAmount"><span id="amount"></span></td>
+                  </tr>
+                  <tr class="scp_row">
+                    <th scope="row">부가세</th>
+                    <td id="tdVat"><span id="taxes"></span></td>
+                  </tr>
+                  <tr class="scp_row">
+                    <th scope="row">봉사료</th>
+                    <td></td>
+                  </tr>
+                  <tr class="scp_row">
+                    <th scope="row">합계</th>
+                    <td><span id="total"></span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <!--// 신용카드 매출전표 -->
+              <table class="bill_typ1" summary="가맹정 정보 상호, 사업자등록번호">
+                <caption>가맹정 정보</caption>
+                <colgroup>
+                  <col width="50%">
+                  <col width="50%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="2">가맹점 정보</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="scp_col">
+                    <th scope="col">상호</th>
+                    <th scope="col">사업자등록번호</th>
+                  </tr>
+                  <tr class="scp_col">
+                    <td>(주)이베이코리아</td>
+                    <td>220-81-83676</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!--// 가맹정 정보 -->
+              <table class="bill_typ1" summary="판매자 정보 상호, 사업자등록번호, 대표자명, 전화번호, 과세유형, 사업장주소, 비고">
+                <caption>판매자 정보</caption>
+                <colgroup>
+                  <col width="50%">
+                  <col width="50%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col" colspan="2">판매자 정보</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="scp_col">
+                    <th scope="col">상호</th>
+                    <th scope="col">사업자등록번호</th>
+                  </tr>
+                  <tr class="scp_col">
+                    <td><span id="shopName"></span></td>
+                    <td><span id="shopNo"></span></td>
+                  </tr>
+                  <tr class="scp_col">
+                    <th scope="col">대표자명</th>
+                    <th scope="col">전화번호</th>
+                  </tr>
+                  <tr class="scp_col">
+                    <td><span id="master"></span></td>
+                    <td><span id="sellerPhoneNo"></span></td>
+                  </tr>
+                  <tr class="scp_col">
+                    <th scope="col">과세유형</th>
+                    <th scope="col">사업장 주소</th>
+                  </tr>
+                  <tr class="scp_col">
+                    <td>일반 과세자</td>
+                    <td><span id="sellerAddress"></span></td>
+                  </tr>
+                  <tr class="scp_col">
+                    <td colspan="2" class="desc">
+                      본 영수증은 <span>(주)이베이코리아</span>에서 발행하는 신용카드매출전표입니다. <br>
+                      위 신용카드매출전표는 부가가치세법 제32조의 2 제3항에 의하여 발행되었으며, 동법 시행령 제57조 제2항에 의하여 세금계산서를 교부하지 않습니다.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <!--// 판매자 정보 -->
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <div align="center" class="btnPrint" style="margin-top:10px;">
-      <a href="#" class="btn em4" onclick="popPrint();"><span class="normal">인쇄하기</span></a>
-      <a href="#" class="btn" onclick="self.close();"><span class="normal">닫기</span></a>
+    <a href="#" class="btn em4" onclick="popPrint();"><span class="normal">인쇄하기</span></a>
+    <a href="#" class="btn" onclick="self.close();"><span class="normal">닫기</span></a>
     </div>
 
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
