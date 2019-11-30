@@ -1,268 +1,280 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43146612-2"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-43146612-2');
-</script>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="//www.11st.co.kr/css/common/pop_template.css" type="text/css">
-<link rel="stylesheet" href="//www.11st.co.kr/css/mytmall/mytmall.css" type="text/css">
-<title>Upgrade Your Life - 11번가</title>
-</head>
-<body onload="winResize()">
-<div id="popLayWrap">
-    <div id="popHead">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43146612-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-43146612-2');
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="http://www.11st.co.kr/css/common/pop_template.css" type="text/css">
+    <link rel="stylesheet" href="http://www.11st.co.kr/css/mytmall/mytmall.css" type="text/css">
+    <title>11번가</title>
+  </head>
+  <body onload="winResize()">
+    <div id="popLayWrap">
+      <div id="popHead">
         <div class="popHeadEnd">
-            <h1><img src="http://buy.11st.co.kr/img/popcmn/tit_documentary_evidence.gif" alt="신용카드 매출전표"></h1>
+          <h1><img src="http://www.11st.co.kr/img/popcmn/tit_documentary_evidence.gif" alt="신용카드 매출전표"></h1>
         </div>
-    </div>
-
-    <div class="popbody_con">
-
+      </div>
+      <div class="popbody_con">
         <!-- contents -->
         <div class="ipinchange_wrap">
-            <div class="credit_wrap">
-                <div class="credit">
-
-                    <!-- 팝업 내용입력부분 ============================= -->
-                    <h2><img src="http://buy.11st.co.kr/img/mytmall/popth_credit_receipt_01.gif" alt="신용카드 매출전표" /></h2>
-
-                    <!-- 2012-09-06 금액자리수 늘림 -->
-                    <div class="credit_bg_v2">
-                        <!-- 2012-09-06 클래스명 변경 -->
-
-                        <table border="0" cellpadding="0" cellspacing="0" class="credit_table" width="601">
-
-                            <colgroup>
-                            <col width="129" />
-                            <col width="117" />
-                            <col width="65" />
-                            <col width="29" />
-                            <col width="29" />
-                            <col width="29" />
-                            <col width="29" />
-                            <col width="29" />
-                            <col width="29" />
-                            <col width="29" />
-                            <col width="29" />
-                            <col width="29" />
-                            <col width="29" />
-                            </colgroup>
-
-                            <tr height="32">
-                                <th>
-                                <div class="marL8">처리일련번호/SEQ NO.</div>
-                                </th>
-                                <td colspan="2">
-                                    <div class="marL8"><span id="seqNo"></span></div>
-                                </td>
-                                <th colspan="5">
-                                <div class="marL8">주문번호/ORDER NO.</div>
-                                </th>
-                                <td colspan="5">
-                                    <div class="marL4"><span id="orderNo"></span></div>
-                                </td>
-                            </tr>
-                            <tr height="32">
-                                <th>
-                                <div class="marL8">카드종류/CARD TYPE</div>
-                                </th>
-                                <td colspan="2">
-                                    <div class="marL8"><span id="cardType"></span></div>
-                                </td>
-                                <th colspan="5">
-                                <div class="marL8">카드번호/CARD NO</div>
-                                </th>
-                                <td colspan="5">
-                                    <div class="marL4"><span id="cardNo"></span></div>
-                                </td>
-                            </tr>
-                            <tr height="32">
-                                <th>
-                                <div class="marL8">유효기간/EXPIRY</div>
-                                </th>
-                                <td colspan="2">
-                                    <div class="marL8">**/**</div>
-                                </td>
-                                <th colspan="5">
-                                <div class="marL8">거래종류/TRANS CLASS</div>
-                                </th>
-                                <td colspan="5">
-                                    <div class="marL4">신용승인</div>
-                                </td>
-                            </tr>
-                            <tr height="31">
-                                <th>
-                                <div class="marL8">거래일자/TRANS DATE</div>
-                                </th>
-                                <td colspan="2">
-                                    <div class="marL8"><span id="transDate"></span></div>
-                                </td>
-                                <th colspan="5">
-                                <div class="marL8">할부/INSTALLMENT</div>
-                                </th>
-                                <td colspan="5">
-                                    <div class="marL4">일시불</div>
-                                </td>
-                            </tr>
-                            <tr height="31">
-                                <th>
-                                <div class="marL8">품명/DESCRIPTION</div>
-                                </th>
-                                <td colspan="12">
-                                    <div class="marL8">
-                                        <span id="description"></span>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr height="31">
-                                <th>
-                                <div class="marL8">거래유형/TRANS TYPE</div>
-                                </th>
-                                <td>
-                                    <div class="marL8">일반</div>
-                                </td>
-                                <td>
-                                    <div class="marL8">
-                                        금액<br />
-                                        <span class="t_gray">AMOUNT</span>
-                                    </div>
-                                </td>
-                                <td class="t_center">&nbsp;<br />\</td>
-                                <td class="t_center"><span class="t_gray">억</span><br />&nbsp;</td>
-                                <td class="t_center"><br /><span id="amount_8"></span>&nbsp;</td>
-                                <td class="t_center"><span class="t_gray">백</span><br /><span id="amount_7"></span>&nbsp;</td>
-                                <td class="t_center"><br /><span id="amount_6"></span>&nbsp;</td>
-                                <td class="t_center"><br /><span id="amount_5"></span>&nbsp;</td>
-                                <td class="t_center"><span class="t_gray">천</span><br /><span id="amount_4"></span>&nbsp;</td>
-                                <td class="t_center"><br /><span id="amount_3"></span>&nbsp;</td>
-                                <td class="t_center"><br /><span id="amount_2"></span>&nbsp;</td>
-                                <td class="t_center"><span class="t_gray">원</span><br /><span id="amount_1"></span>&nbsp;</td>
-                            </tr>
-                            <tr height="31">
-                                <th>
-                                <div class="marL8">통신판매업자 상호/<br />SHOP NAME</div>
-                                </th>
-                                <td>
-                                    <div class="marL8"><span id="shopName"></span></div>
-                                </td>
-                                <td>
-                                    <div class="marL8">
-                                        세금<br />
-                                        <span class="t_gray">TAXES</span>
-                                    </div>
-                                </td>
-                                <td class="t_center">\</td>
-                                <td class="t_center"><span id="taxes_9"></span></td>
-                                <td class="t_center"><span id="taxes_8"></span></td>
-                                <td class="t_center"><span id="taxes_7"></span></td>
-                                <td class="t_center"><span id="taxes_6"></span></td>
-                                <td class="t_center"><span id="taxes_5"></span></td>
-                                <td class="t_center"><span id="taxes_4"></span></td>
-                                <td class="t_center"><span id="taxes_3"></span></td>
-                                <td class="t_center"><span id="taxes_2"></span></td>
-                                <td class="t_center"><span id="taxes_1"></span></td>
-                            </tr>
-                            <tr height="32">
-                                <th><div class="marL8">대표자/MASTER</div></th>
-                                <td><div class="marL8"><span id="master"></span></div></td>
-                                <td><div class="marL8">봉사료<br /><span class="t_gray">TIPS</span></div></td>
-                                <td class="t_center">\</td>
-                                <td class="t_center">&nbsp;</td>
-                                <td class="t_center">&nbsp;</td>
-                                <td class="t_center">&nbsp;</td>
-                                <td class="t_center">&nbsp;</td>
-                                <td class="t_center">&nbsp;</td>
-                                <td class="t_center">&nbsp;</td>
-                                <td class="t_center">&nbsp;</td>
-                                <td class="t_center">&nbsp;</td>
-                                <td class="t_center">0</td>
-                            </tr>
-                            <tr height="32">
-                                <th><div class="marL8">사업자등록번호/<br />SHOP NO.</div></th>
-                                <td><div class="marL8"><span id="shopNo"></span></div></td>
-                                <td><div class="marL8">합계<br /><span class="t_gray">TOTAL</span></div></td>
-                                <td class="t_center">\</td>
-                                <td class="t_center"><span id="total"></span></td>
-                                <td class="t_center"><span id="total_8"></span></td>
-                                <td class="t_center"><span id="total_7"></span></td>
-                                <td class="t_center"><span id="total_6"></span></td>
-                                <td class="t_center"><span id="total_5"></span></td>
-                                <td class="t_center"><span id="total_4"></span></td>
-                                <td class="t_center"><span id="total_3"></span></td>
-                                <td class="t_center"><span id="total_2"></span></td>
-                                <td class="t_center"><span id="total_1"></span></td>
-                            </tr>
-                            <tr height="32">
-                                <th>
-                                <div class="marL8">
-                                    판매자 전화번호/<br />
-                                    SELLER PHONE NO.
-                                </div>
-                                </th>
-                                <td>
-                                    <div class="marL8"><span id="sellerPhoneNo"></span></div>
-                                </td>
-                                <td colspan="2">
-                                    <div class="marL8">
-                                        승인번호<br />
-                                        <span class="t_gray">APPROVAL NO.</span>
-                                    </div>
-                                </td>
-                                <td colspan="8">
-                                    <div class="marL8"><span id="approvalNo"></span></div>
-                                </td>
-                            </tr>
-                            <tr height="32">
-                                <th>
-                                <div class="marL8">
-                                    판매자 사업장주소/<br />
-                                    SELLER ADDRESS
-                                </div>
-                                </th>
-                                <td colspan="11">
-                                    <div class="marL8"><span id="sellerAddress"></span></div>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-
-                    <div class="t_small marT5">
-                        * 본 영수증은 SK플래닛㈜에서 발행하는 신용카드 매출전표입니다.<br>
-                        * 동일 주문번호 건에 대해 별도 구매확정시 취소전표 발생할 수 있으며, 실제 취소는 아닙니다.
-                    </div>
-
-                    <!-- [2013-02-15 jsshin] 버튼 이동 -->
-                    <div class="btn_wrap">
-
-
-                        <a href="#" class="btn em4" onclick="javascript:print();"><span class="normal">인쇄하기</span></a>
-
-                        <a href="#" class="btn" onclick="javascript:self.close();"><span class="normal">닫기</span></a>
-                        <!-- //btn -->
-
-                    </div>
-                    <!-- //[2013-02-15 jsshin] 버튼 이동 -->
-
-
-
-                </div>
-                <!-- <div class="credit"> -->
-
+          <div class="credit_wrap">
+            <div class="credit">
+              <h2><img src="http://www.11st.co.kr/img/mytmall/popth_credit_receipt_01.gif" alt="신용카드 매출전표" /></h2>
+              <div class="credit_bg_v2">
+                <table border="0" cellpadding="0" cellspacing="0" class="credit_table" width="601">
+                  <colgroup>
+                    <col width="129" />
+                    <col width="117" />
+                    <col width="65" />
+                    <col width="29" />
+                    <col width="29" />
+                    <col width="29" />
+                    <col width="29" />
+                    <col width="29" />
+                    <col width="29" />
+                    <col width="29" />
+                    <col width="29" />
+                    <col width="29" />
+                    <col width="29" />
+                  </colgroup>
+                  <tr height="32">
+                    <th>
+                      <div class="marL8">처리일련번호/SEQ NO.</div>
+                    </th>
+                    <td colspan="2">
+                      <div class="marL8"><span id="seqNo"></span></div>
+                    </td>
+                    <th colspan="5">
+                      <div class="marL8">주문번호/ORDER NO.</div>
+                    </th>
+                    <td colspan="5">
+                      <div class="marL4"><span id="orderNo"></span</div>
+                    </td>
+                  </tr>
+                  <tr height="32">
+                    <th>
+                      <div class="marL8">카드종류/CARD TYPE</div>
+                    </th>
+                    <td colspan="2">
+                      <div class="marL8"><span id="cardType"></span></div>
+                    </td>
+                    <th colspan="5">
+                      <div class="marL8">카드번호/CARD NO</div>
+                    </th>
+                    <td colspan="5">
+                      <div class="marL4"><span id="cardNo"></span></div>
+                    </td>
+                  </tr>
+                  <tr height="32">
+                    <th>
+                      <div class="marL8">유효기간/EXPIRY</div>
+                    </th>
+                    <td colspan="2">
+                      <div class="marL8">**/**</div>
+                    </td>
+                    <th colspan="5">
+                      <div class="marL8">거래종류/TRANS CLASS</div>
+                    </th>
+                    <td colspan="5">
+                      <div class="marL4">신용승인</div>
+                    </td>
+                  </tr>
+                  <tr height="31">
+                    <th>
+                      <div class="marL8">거래일자/TRANS DATE</div>
+                    </th>
+                    <td colspan="2">
+                      <div class="marL8"><span id="transDate"></span></div>
+                    </td>
+                    <th colspan="5">
+                      <div class="marL8">할부/INSTALLMENT</div>
+                    </th>
+                    <td colspan="5">
+                      <div class="marL4">일시불</div>
+                    </td>
+                  </tr>
+                  <tr height="31">
+                    <th>
+                      <div class="marL8">품명/DESCRIPTION</div>
+                    </th>
+                    <td colspan="12">
+                      <div class="marL8">
+                        <span id="description"></span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr height="31">
+                    <th>
+                      <div class="marL8">거래유형/TRANS TYPE</div>
+                    </th>
+                    <td>
+                      <div class="marL8">일반</div>
+                    </td>
+                    <td>
+                      <div class="marL8">금액
+                        <br />
+                        <span class="t_gray">AMOUNT</span>
+                      </div>
+                    </td>
+                    <td class="t_center">&nbsp;
+                      <br />\
+                    </td>
+                    <td class="t_center"><span class="t_gray">억</span>
+                      <br /><span id="amount_9"></span>
+                    </td>
+                    <td class="t_center">
+                      <br /><span id="amount_8"></span>
+                    </td>
+                    <td class="t_center"><span class="t_gray">백</span>
+                      <br /><span id="amount_7"></span>
+                    </td>
+                    <td class="t_center">
+                      <br /><span id="amount_6"></span>
+                    </td>
+                    <td class="t_center">
+                      <br /><span id="amount_5"></span>
+                    </td>
+                    <td class="t_center"><span class="t_gray">천</span>
+                      <br /><span id="amount_4"></span>
+                    </td>
+                    <td class="t_center">
+                      <br /><span id="amount_3"></span>
+                    </td>
+                    <td class="t_center">
+                      <br /><span id="amount_2"></span>
+                    </td>
+                    <td class="t_center"><span class="t_gray">원</span>
+                      <br /><span id="amount_1"></span>
+                    </td>
+                  </tr>
+                  <tr height="31">
+                    <th>
+                      <div class="marL8">통신판매업자 상호/
+                        <br />SHOP NAME
+                      </div>
+                    </th>
+                    <td>
+                      <div class="marL8"><span id="shopName"></span></div>
+                    </td>
+                    <td>
+                      <div class="marL8">세금
+                        <br />
+                        <span class="t_gray">TAXES</span>
+                      </div>
+                    </td>
+                    <td class="t_center">\</td>
+                    <td class="t_center"><span id="taxes_9"></span></td>
+                    <td class="t_center"><span id="taxes_8"></span></td>
+                    <td class="t_center"><span id="taxes_7"></span></td>
+                    <td class="t_center"><span id="taxes_6"></span></td>
+                    <td class="t_center"><span id="taxes_5"></span></td>
+                    <td class="t_center"><span id="taxes_4"></span></td>
+                    <td class="t_center"><span id="taxes_3"></span></td>
+                    <td class="t_center"><span id="taxes_2"></span></td>
+                    <td class="t_center"><span id="taxes_1"></span></td>
+                  </tr>
+                  <tr height="32">
+                    <th>
+                      <div class="marL8">대표자/MASTER</div>
+                    </th>
+                    <td>
+                      <div class="marL8"><span id="master"></span></div>
+                    </td>
+                    <td>
+                      <div class="marL8">봉사료
+                        <br /><span class="t_gray">TIPS</span>
+                      </div>
+                    </td>
+                    <td class="t_center">\</td>
+                    <td class="t_center">&nbsp;</td>
+                    <td class="t_center">&nbsp;</td>
+                    <td class="t_center">&nbsp;</td>
+                    <td class="t_center">&nbsp;</td>
+                    <td class="t_center">&nbsp;</td>
+                    <td class="t_center">&nbsp;</td>
+                    <td class="t_center">&nbsp;</td>
+                    <td class="t_center">&nbsp;</td>
+                    <td class="t_center">0</td>
+                  </tr>
+                  <tr height="32">
+                    <th>
+                      <div class="marL8">사업자등록번호/
+                        <br />SHOP NO.
+                      </div>
+                    </th>
+                    <td>
+                      <div class="marL8"><span id="shopNo"></span></div>
+                    </td>
+                    <td>
+                      <div class="marL8">합계
+                        <br /><span class="t_gray">TOTAL</span>
+                      </div>
+                    </td>
+                    <td class="t_center">\</td>
+                    <td class="t_center"><span id="total_9"></span></td>
+                    <td class="t_center"><span id="total_8"></span></td>
+                    <td class="t_center"><span id="total_7"></span></td>
+                    <td class="t_center"><span id="total_6"></span></td>
+                    <td class="t_center"><span id="total_5"></span></td>
+                    <td class="t_center"><span id="total_4"></span></td>
+                    <td class="t_center"><span id="total_3"></span></td>
+                    <td class="t_center"><span id="total_2"></span></td>
+                    <td class="t_center"><span id="total_1"></span></td>
+                  </tr>
+                  <tr height="32">
+                    <th>
+                      <div class="marL8">판매자 전화번호/
+                        <br /> SELLER PHONE NO.
+                      </div>
+                    </th>
+                    <td>
+                      <div class="marL8"><span id="sellerPhoneNo"></span></div>
+                    </td>
+                    <td colspan="2">
+                      <div class="marL8">승인번호
+                        <br />
+                        <span class="t_gray">APPROVAL NO.</span>
+                      </div>
+                    </td>
+                    <td colspan="8">
+                      <div class="marL8"><span id="approvalNo"></span></div>
+                    </td>
+                  </tr>
+                  <tr height="32">
+                    <th>
+                      <div class="marL8">판매자 사업장주소/
+                        <br /> SELLER ADDRESS
+                      </div>
+                    </th>
+                    <td colspan="11">
+                      <div class="marL8"><span id="sellerAddress"></span></div>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <div class="t_small marT5">* 본 영수증은 11번가㈜에서 발행하는 신용카드 매출전표입니다.
+                <br> * 동일 주문번호 건에 대해 별도 구매확정시 취소전표 발생할 수 있으며, 실제 취소는 아닙니다.
+              </div>
+              <div class="btn_wrap">
+                <a href="#" class="btn em4" onclick="javascript:print();"><span class="normal">인쇄하기</span></a>
+                <a href="#" class="btn" onclick="javascript:self.close();"><span class="normal">닫기</span></a>
+              </div>
             </div>
+            <!-- <div class="credit"> -->
+          </div>
         </div>
         <!-- //contents  -->
-
+      </div>
     </div>
-</div>
-
-<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="../assets/receipt.js"></script>
-<script src="../assets/receipt_form.js"></script>
-<link href="../assets/print.css" rel="stylesheet" media="print">
-</body>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="../assets/receipt.js"></script>
+    <script src="../assets/receipt_form.js"></script>
+    <link href="../assets/print.css" rel="stylesheet" media="print">
+  </body>
 </html>
